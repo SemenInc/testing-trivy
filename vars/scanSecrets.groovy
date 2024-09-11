@@ -1,4 +1,5 @@
 #!/usr/bin/env groovy
+// vars/scanSecrets.groovy
 
 def call() {
   echo "HELLO FROM LIBRARY"
