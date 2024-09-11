@@ -2,6 +2,9 @@
 // vars/scanSecrets.groovy
 
 def call(String foo) {
-  sh "wget https://ftp.acciaccatura.dk/static/media/toolkit/trivy-secret.yaml"
+  String filename = "main-trivy-config.yaml"
+  
+  sh "wget -O ${filename} https://ftp.acciaccatura.dk/static/media/toolkit/trivy-secret.yaml"
   sh "trivy filesystem ./"
+  sh "rm -f ${filename}"
 }
