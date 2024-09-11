@@ -2,7 +2,7 @@
 
 def call() {
   echo "HELLO FROM LIBRARY"
-  // sh "wget https://ftp.acciaccatura.dk/static/media/toolkit/trivy-secret.yaml"
+  sh "wget https://ftp.acciaccatura.dk/static/media/toolkit/trivy-secret.yaml"
   // BUILD_FULL = sh (
   //     script: "trivy filesystem ./",
   //     returnStatus: true
