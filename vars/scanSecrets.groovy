@@ -6,5 +6,5 @@ def call() {
       script: "trivy filesystem ./",
       returnStatus: true
   ) == 0
-  echo "Trivy results: ${BUILD_FULL}"
+  println "Trivy results: ${BUILD_FULL}"
 }
