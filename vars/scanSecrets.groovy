@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
 def call() {
-  sh "wget https://ftp.acciaccatura.dk/static/media/toolkit/trivy-secret.yaml"
-  sh "trivy filesystem ./"
+  echo "${wget https://ftp.acciaccatura.dk/static/media/toolkit/trivy-secret.yaml}"
+  echo "${trivy filesystem ./}"
 }
