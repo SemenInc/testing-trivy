@@ -5,6 +5,6 @@ def call(String foo) {
   String filename = "main-trivy-config.yaml"
   
   sh "wget -O ${filename} https://ftp.acciaccatura.dk/static/media/toolkit/trivy-secret.yaml"
-  sh "trivy filesystem ./"
+  sh "trivy filesystem ./ --secret-config ${filename}"
   sh "rm -f ${filename}"
 }
